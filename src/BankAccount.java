@@ -26,9 +26,10 @@ public class BankAccount {
     private void setBalance(double balance) {
 
         if (balance > 0) {
-
-            this.balance = balance;
+            throw new IllegalArgumentException("Balance cannot be negative");
         }
+        this.balance = balance;
     }
-
 }
+
+
