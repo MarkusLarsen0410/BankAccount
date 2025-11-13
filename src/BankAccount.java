@@ -12,10 +12,10 @@ public class BankAccount {
         setBalance(balance + amount);
     }
 
-    public void withDraw(double amount) {
+    public void withDraw(double amount) throws InsufficientFundsException {
 
         if(amount > balance){
-            throw new IllegalArgumentException("Withdraw-amount cannot be larger than balance");
+            throw new InsufficientFundsException("beløbet er højere end din balance");
         }
         setBalance(balance - amount);
     }

@@ -7,9 +7,9 @@ public class Main {
         try{
         account.withDraw(1500);}
 
-        catch (IllegalArgumentException e){
+        catch (InsufficientFundsException e){
 
-            System.out.println("Fejl " + e.getMessage());
+            System.out.println("Fejl " + (e.getMessage()));
         }
     }
 }
