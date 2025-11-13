@@ -14,7 +14,9 @@ public class BankAccount {
 
     public void withDraw(double amount) {
 
-
+        if(amount > balance){
+            throw new IllegalArgumentException("Withdraw-amount cannot be larger than balance");
+        }
         setBalance(balance - amount);
     }
 

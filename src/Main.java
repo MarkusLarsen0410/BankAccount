@@ -5,7 +5,7 @@ public class Main {
 
         BankAccount account = new BankAccount(1000);
         try{
-        account.withDraw(-500);}
+        account.withDraw(1500);}
 
         catch (IllegalArgumentException e){
 
